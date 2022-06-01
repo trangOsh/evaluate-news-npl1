@@ -1,0 +1,13 @@
+// header {
+//     display: flex;
+//     justify-content: space-between;
+//     padding: 10px 40px;
+// }
+$short:10px;
+$long:40px;
+
+header {
+    display:flex;
+    justify-content:space-between;
+    padding: $short $long;
+}
