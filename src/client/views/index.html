@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Test</title>
+        <!-- <script type="text/javascript" src="../../../dist/main.js"></script> -->
         <!-- <link rel="stylesheet" href="/styles/resets.css">
         <link rel="stylesheet" href="/styles/base.css">
         <link rel="stylesheet" href="/styles/header.css">
@@ -13,10 +14,10 @@
     <body>
 
         <header>
-            <div class="">
+            <div class="logo">
                 Logo
             </div>
-            <div class="">
+            <div class="navigation">
                 navigation
             </div>
         </header>
@@ -24,19 +25,19 @@
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
+                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="please enter">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
 
             <section>
                 <strong>Form Results:</strong>
-                <div id="results"></div>
-                <div id="agreement"></div>
-                <div id="confidence"></div>
-                <div id="irony"></div>
-                <div id="model"></div>
-                <div id="subjectivity"></div>
+                <div id="results">This is the result from search with an url </div>
+                <div  class="box" id="agreement"></div>
+                 <div class="box" id="confidence"></div>
+                <div class="box" id="irony"></div>
+                <div class="box" id="model"></div>
+                <div class="box" id="subjectivity"></div> 
             </section>
         </main>
 
@@ -44,6 +45,6 @@
             <p>This is a footer</p>
         </footer>
         <!-- <script src=""></script> -->
-        <script type="text/javascript" src="main.js"></script>
+        <!-- <script type="text/javascript" src="../../../dist/main.js"></script> -->
     </body>
 </html>

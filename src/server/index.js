@@ -24,9 +24,8 @@ console.log(__dirname)
 
 
 
-const api= {
-key: `${process.env.API_KEY}`
-};
+const api= process.env.API_KEY
+
 const baseUrl = 'https://api.meaningcloud.com/sentiment-2.1?key=';
 //console.log(`Your API key is ${process.env.API_KEY}`);
 console.log("there is api", api)
@@ -47,17 +46,28 @@ app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
 
-app.get("/all", function(req, res) {
-    res.send(cloudData)
-})
+// app.get("/all", function(req, res) {
+//     res.send(cloudData)
+// })
 
 app.get('/apikey',function(req,res) {
     res.send(api)
 })
-
-app.post("/addData", function(req, res) {
-    cloudData = req.body;
-    res.send(cloudData)
-})
+/*
+APIKey = await getAPI('http://localhost:8081/apikey')
+    const finalURL = baseURL + APIKey.key + "&of=json&url=" + text +"&lang=en"
+*/
+const baseURL= "https://api.meaningcloud.com/sentiment-2.1?key="
+// app.post("/apiData",function(req, res) {
+//     //  input = req.body.url;
+//     //  const url = baseURL+ api.key +"&of=json&url="+ input +"&lang=en"
+//     //  console.log(url)
+//     cloudData = req.body;
+//     res.send(cloudData)
+//     // const request = await fetch(url)
+//     // const apiRes= await request.json();
+//     // console.log(apiRes)
+//     // res.send(apiRes)
+// })
 //`https://api.meaningcloud.com/sentiment-2.1?key=API_KEY&of=json&url=<URL_INPUT>&lang=en`
 // const baseUrl="https://api.meaningcloud.com/sentiment-2.1?key="

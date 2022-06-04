@@ -7,20 +7,21 @@ module.exports = {
     mode: 'production',
     output:{
         libraryTarget: 'var',
-        library:"Client"
+        library:"Client",
+        path:path.resolve(__dirname,"dist")
 
     },
     module: {
         rules: [
             {
-                test: '/\.js$/',
+                test: /\.js$/,
                 exclude: /node_modules/,
                 loader: "babel-loader"
             },
             { 
                 test:/\.scss$/,
-                use:['styl-loader','css-loader','sass-loader']
-            }
+                use:['style-loader','css-loader','sass-loader']
+            },
         ]
     },
     plugins: [
