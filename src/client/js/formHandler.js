@@ -8,7 +8,7 @@ function handleSubmit(event) {
     Client.checkForName(formText)
 
     console.log("::: Form Submitted :::")
-    fetch('http://localhost:8081/apikey')
+    fetch('http://localhost:8082/apikey')
     .then(res => res.text())
     .then(function(res) {
         //console.log(res)
