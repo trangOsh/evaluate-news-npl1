@@ -58,18 +58,14 @@ APIKey = await getAPI('http://localhost:8081/apikey')
     const finalURL = baseURL + APIKey.key + "&of=json&url=" + text +"&lang=en"
 */
 const baseURL= "https://api.meaningcloud.com/sentiment-2.1?key="
-app.post("/apiData",postData) 
+
+app.post('/apiData', function(req,res){
+    cloudData = req.body;
+    res.send(apiData)
+})
+// app.post("/apiData", postData) 
 
 
-function postData (req, res) {
-    newEntry = {
-        agreement: req.body.agreement,
-        confidence:req.body.confidence,
-
-        
-
-    }
-}
 
 // const postData = async(){
 //      input = req.body.url;
