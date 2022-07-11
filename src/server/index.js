@@ -7,6 +7,7 @@ const webpack = require('webpack');
 const bodyParser = require('body-parser')
 const app = express()
 
+//const fetch = require("node-fetch");
 
 // body parser as middle ware
 app.use(bodyParser.urlencoded({extended: false}));
@@ -36,7 +37,7 @@ app.get('/', function (req, res) {
 })
 
 // designates what port the app will listen to for incoming requests
-app.listen(8989, function () {
+app.listen(8082, function () {
     console.log('Example app listening on port 8082!')
 })
 
